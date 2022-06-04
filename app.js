@@ -48,16 +48,26 @@ taskCount.innerHTML = dd.childElementCount
 function edit(e){
 
 var par = e.parentNode
-var edit = document.createElement('input')
-var editBtn = document.createElement('button')
+var br = document.createElement('br')
+var saveInp = document.createElement('input')
+var saveBtn = document.createElement('button')
 
-editBtn.innerHTML = 'Save'
+saveBtn.innerHTML = 'Save'
+saveBtn.setAttribute('onclick','save(this)')
 
-par.appendChild(edit)
-par.appendChild(editBtn)
+par.appendChild(br)
+par.appendChild(saveInp)
+par.appendChild(saveBtn)
 
-    console.log(e.parentNode.firstChild)
+    
 }
 
-
+function save(e){
+var parent = e.parentNode
+var newVal = e.previousSibling.value
+var paraVal = parent.firstChild
+console.log(parent)
+console.log(newVal)
+console.log(paraVal)
+}
 
