@@ -1,0 +1,9 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+
+#new{text-align: center;margin-top: 5%;margin-bottom: 10px;}
+
+#tasks{text-align: center;margin-top: 1%;margin-bottom: 10px;}
+
+.marg{margin: 10px;margin-bottom: 10px;}
+
+.wholeB{width: 50%;margin: 10px auto;height: 500px;}

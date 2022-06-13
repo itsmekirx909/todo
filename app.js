@@ -16,15 +16,18 @@ dd.appendChild(el).appendChild(val)
 
 
 var delBtn = document.createElement("button");
-delBtn.innerHTML = "DEL";
+delBtn.innerHTML = "Delete";
+delBtn.className = 'btn-danger px-2'
 delBtn.setAttribute('onclick','del(this)')
 el.appendChild(delBtn);
 
 
 var editBtn = document.createElement("button");
-editBtn.innerHTML = "EDIT";
+editBtn.innerHTML = "Edit";
+editBtn.className = 'btn-success px-2'
 editBtn.setAttribute('onclick','edit(this)')
 el.appendChild(editBtn)
+editBtn.className = 'btn-success px-2'
 
 taskCount.innerHTML = dd.childElementCount
 
@@ -52,8 +55,10 @@ var br = document.createElement('br')
 var saveInp = document.createElement('input')
 var saveBtn = document.createElement('button')
 
+
 saveBtn.innerHTML = 'Save'
 saveBtn.setAttribute('onclick','save(this)')
+saveBtn.className = 'btn-primary px-2'
 
 par.appendChild(br)
 par.appendChild(saveInp)
@@ -65,9 +70,12 @@ par.appendChild(saveBtn)
 function save(e){
 var parent = e.parentNode
 var newVal = e.previousSibling.value
-var paraVal = parent.firstChild
-console.log(parent)
-console.log(newVal)
-console.log(paraVal)
+parent.firstChild.remove()
+
+parent.prepend(newVal)
+parent.lastChild.remove()
+parent.lastChild.remove()
+parent.lastChild.remove()
+
 }
 
